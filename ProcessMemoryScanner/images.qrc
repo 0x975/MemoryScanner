@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/binary_lable.png</file>
+        <file>images/binary_lable_packege.png</file>
+        <file>images/Monitor-icon.png</file>
+        <file>images/monitor_icon.png</file>
+        <file>images/lupa.png</file>
+        <file>images/refresh.png</file>
+        <file>images/find.png</file>
+        <file>images/binary_lable_back.png</file>
+    </qresource>
+</RCC>
