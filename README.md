@@ -44,3 +44,4 @@ Simple memory scanner project for Linux distributions with GUI based on Qt frame
 * add opportunitie to search in certain memory regions (only in stack and heap for example) 
 * bind progress bar with search event (yeap, it's just added to gui yet)
 * add embedded hex editor to see all available memory regions
+* make it crossplatform. Simply extend abstract classes and reimplement platform specific methods
