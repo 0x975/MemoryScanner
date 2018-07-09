@@ -5,7 +5,7 @@ Simple memory scanner project for Linux distributions with GUI based on Qt frame
 ![alt text](https://github.com/b00m-b00m/MemoryScanner/blob/master/Screenshot%20from%202018-07-07%2018-38-40.png "")
 
 # Build:
-### Build from source:
+### Build from source (Ubuntu/Mint):
 * clone or download source code
 * go to directory that contains source code
 * open terminal and ececute following commands
