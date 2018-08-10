@@ -22,7 +22,7 @@ Simple memory scanner project for Linux distributions with GUI based on Qt frame
    
       $ make
    ```
-   * or this:
+   * or this (shadow build):
    ```
       $ mkdir build
    
