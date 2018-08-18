@@ -76,6 +76,7 @@ std::vector<memoryMatch<Type>> MemoryScannerEngine<Type>::makeFirstScan(unsigned
         vPtr = (Type*)&memory_block[0];
         Type curValue;
         for(int i = 0; i < memory_block.size() / sizeof(Type); i++) {
+            //if(!vPtr) return matches;
             curValue = *vPtr;
             if(compareMethod(compareType, curValue, value)) {
                 uint8_t *offset = reinterpret_cast<uint8_t*>(i*sizeof(Type));

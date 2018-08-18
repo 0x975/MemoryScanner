@@ -43,15 +43,18 @@ std::vector<memory_region> LinuxMemoryInteraction::readMemoryLayout(unsigned int
 
                 if(strstr(pathname, "[heap]")) {
                     mem_region.type = heap;
+                    memory_layout.push_back(mem_region);
+
                 }
                 else if(strstr(pathname, "[stack]")) {
                     mem_region.type = stack;
+                    memory_layout.push_back(mem_region);
                 }
                 else {
 
                 }
 
-                memory_layout.push_back(mem_region);
+               // memory_layout.push_back(mem_region);
             }
         }
     }

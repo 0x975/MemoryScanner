@@ -13,6 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
     QGroupBox *matchesGroup = createMatchesPanel();
     QGroupBox *scannerGroup = createScannerPanel();
 
+    //QSplitter *splitter = new QSplitter(Qt::Horizontal, this);
+    //splitter->addWidget(matchesGroup);
+    //splitter->addWidget(scannerGroup);
+
+    //main_layout->addWidget(splitter);
     main_layout->addWidget(matchesGroup);
     main_layout->addWidget(scannerGroup);
 
@@ -41,6 +46,10 @@ MainWindow::MainWindow(QWidget *parent)
     int32MemoryScanner = new MemoryScannerEngine<int32_t>(memoryInteractionStratege);
     int64MemoryScanner = new MemoryScannerEngine<int64_t>(memoryInteractionStratege);
 */
+
+    //setMinimumWidth(1000);
+    //setMinimumHeight(400);
+
     centralWidget->setLayout(main_layout);
     setCentralWidget(centralWidget);
 }

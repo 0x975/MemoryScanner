@@ -50,6 +50,7 @@ struct memoryMatch
 {
     uint8_t *addres;
     uint8_t *offset;
+
     Type value;
     region_type type;    
 };
