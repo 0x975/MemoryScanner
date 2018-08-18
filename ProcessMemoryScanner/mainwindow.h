@@ -82,6 +82,11 @@ private:
     MemoryScannerEngine<int32_t> *int32MemoryScanner;
     MemoryScannerEngine<int64_t> *int64MemoryScanner;
 */
+
+    QIntValidator *intValidator;
+    QDoubleValidator *doubleValidator;
+    QRegExpValidator *charValidator;
+
     std::vector<uint8_t*> matchesAdresses;
     QTableWidget *matchesTable;
     QLabel *matchesCount;

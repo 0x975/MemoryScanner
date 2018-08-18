@@ -25,6 +25,11 @@ MainWindow::MainWindow(QWidget *parent)
     doubleMemoryScanner     = new MemoryScannerEngine<double>(memoryInteractionStratege);
     longMemoryScanner       = new MemoryScannerEngine<long>(memoryInteractionStratege);
     floatMemoryScanner      = new MemoryScannerEngine<float>(memoryInteractionStratege);
+
+    intValidator = new QIntValidator;
+    doubleValidator = new QDoubleValidator;
+    charValidator = new QRegExpValidator(QRegExp("^([a-z]|[A-Z])$"));
+
 /*
     uint8MemoryScanner  = new MemoryScannerEngine<uint8_t>(memoryInteractionStratege);
     uint16MemoryScanner = new MemoryScannerEngine<uint16_t>(memoryInteractionStratege);
@@ -226,6 +231,11 @@ void MainWindow::onScannBtnHandler()
         return;
     }
 
+   if(!valueTextField->hasAcceptableInput()) {
+        showWarningMessage("no acceptable input");
+        return;
+   }
+
     dataTypeSelector->setDisabled(true);
     try {
         makeScann();     
@@ -242,6 +252,7 @@ void MainWindow::onRefreshBtnHandler()
     scannCount->setText(QString::number(0));
     matchesTable->setRowCount(0);
 
+    valueTextField->clear();
     refreshAllScanner();
 }
 
@@ -595,6 +606,31 @@ void MainWindow::refreshAllScanner()
 void MainWindow::dataTypeSelectorChanged(int index)
 {
     Q_UNUSED(index);
+    valueTextField->clear();
+
+    int dataIndex = dataTypeSelector->currentIndex();
+    if(dataIndex == 0) {
+        valueTextField->setValidator(charValidator);
+    }
+    if(dataIndex == 1) {
+        valueTextField->setValidator(intValidator);
+    }
+    if(dataIndex == 2) {
+        valueTextField->setValidator(intValidator);
+    }
+    if(dataIndex == 3) {
+        valueTextField->setValidator(intValidator);
+    }
+    if(dataIndex == 4) {
+        valueTextField->setValidator(doubleValidator);
+    }
+    if(dataIndex == 5) {
+        valueTextField->setValidator(doubleValidator);
+    }
+    if(dataIndex == 6) {
+        valueTextField->setValidator(doubleValidator);
+    }
+
     //std::cout << "index: " << index << std::endl;
 }
 
