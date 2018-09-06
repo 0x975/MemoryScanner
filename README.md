@@ -40,7 +40,7 @@ Simple memory scanner project for Linux distributions with GUI based on Qt frame
 
 # To do:
 * fix incomplete displayed process name in TaskWidget
-* fix failure in large processes (out_of_range pointer)
+* fix failure in large processes (out_of_range pointer issue)
 * add opportunitie to search in certain memory regions (only in stack and heap for example) 
 * bind progress bar with search event (yeap, it's just added to gui yet)
 * add embedded hex editor to see all available memory regions
